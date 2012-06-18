@@ -1,14 +1,11 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    var cody = {
-        living: true,
-        age: 23,
-        gender: 'male',
-        getGender: function () { return cody.gender; }
-    };
-    // notice the last property has no comma after it
+    var cody = new Object();
+    cody.living = true;
+    cody.age = 33;
+    cody.gender = 'male';
+    cody.getGender = function () { return cody.gender; };
 
     console.log(cody); // logs cody object and properties
 
-</script>
-</body>
+</script></body></html>

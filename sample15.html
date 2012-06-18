@@ -1,28 +1,21 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    // Produce primitive values
-    var myNull = null;
-    var myUndefined = undefined;
-    var primitiveString1 = "foo";
-    var primitiveString2 = String('foo'); // did not use new, so we get primitive
-    var primitiveNumber1 = 10;
-    var primitiveNumber2 = Number('10'); // did not use new, so we get primitive
-    var primitiveBoolean1 = true;
-    var primitiveBoolean2 = Boolean('true'); // did not use new, so we get primitive
+    var price1 = 10;
+    var price2 = 10;
+    var price3 = new Number('10'); // a complex numeric object because new was used
+    var price4 = price3;
 
-    /* Access the toString() property method (inherited by objects from object.prototype) to demonstrate that the primitive values are converted to objects when treated like objects. */
+    console.log(price1 === price2); // logs true
 
-    // logs "string string"
-    console.log(primitiveString1.toString(), primitiveString2.toString());
+    /* logs false because price3 contains a complex number object and price 1 is a primitive value */
+    console.log(price1 === price3);
 
-    // logs "number number"
-    console.log(primitiveNumber1.toString(), primitiveNumber2.toString());
+    // logs true because complex values are equal by reference, not value
+    console.log(price4 === price3);
 
-    // logs "boolean boolean"
-    console.log(primitiveBoolean1.toString(), primitiveBoolean2.toString());
+    // what if we update the price4 variable to contain a primitive value?
+    price4 = 10;
 
-    /* This will throw an error and not show up in firebug lite, as null and undefined do not convert to objects and do not have constructors. */
-    console.log(myNull.toString());
-    console.log(myUndefined.toString());
+    console.log(price4 === price3); // logs false: price4 is now primitive rather than complex
 
 </script></body></html>

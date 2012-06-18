@@ -1,15 +1,15 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    // number object treated like an object
-    var numberObject = new Number(1.10023);
-    console.log(numberObject.toFixed()); // logs 1
-    console.log(numberObject['toFixed']()); // logs 1
+    // string object treated like an object
+    var stringObject = new String('foo');
+    console.log(stringObject.length); // logs 3
+    console.log(stringObject['length']); // logs 3
 
-    // number literal/primitive converted to an object when treated as an object
-    var numberLiteral = 1.10023;
-    console.log(numberLiteral.toFixed()); // logs 1
-    console.log(numberLiteral['toFixed']()); // logs 1
-    console.log((1234).toString()); // logs '1234'
-    console.log(1234['toString']()); // logs '1234'
+    // string literal/primitive converted to an object when treated as an object
+    var stringLiteral = 'foo';
+    console.log(stringLiteral.length); // logs 3
+    console.log(stringLiteral['length']); // logs 3
+    console.log('bar'.length); // logs 3
+    console.log('bar'['length']); // logs 3
 
 </script></body></html>

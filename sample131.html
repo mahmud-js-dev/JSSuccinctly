@@ -1,14 +1,17 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    var Person = function () { this.bar = 'bar' };
-    Person.prototype.foo = 'foo';
+    var Person = function (legs, arms) {
+        // shadow prototype value
+        if (legs !== undefined) { this.legs = legs; }
+        if (arms !== undefined) { this.arms = arms; }
+    };
 
-    var Chef = function () { this.goo = 'goo' };
-    Chef.prototype = new Person();
-    var cody = new Chef();
+    Person.prototype.legs = 2;
+    Person.prototype.arms = 2;
+    Person.prototype.countLimbs = function () { return this.legs + this.arms; };
 
-    console.log(cody.foo); // logs 'foo'
-    console.log(cody.goo); // logs 'goo'
-    console.log(cody.bar); // logs 'bar'
+    var chuck = new Person(0, 0);
+
+    console.log(chuck.countLimbs()); // logs 0
 
 </script></body></html>

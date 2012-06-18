@@ -1,15 +1,14 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    var parentFunction = function () {
-        var foo = 'foo';
-        return function () { // anonymous function being returned
-            console.log(foo); // logs 'foo'
-        }
+    var x = false;
+    var foo = function () {
+        var x = false;
+        bar = function () {
+            var x = true;
+            console.log(x); // local x is first in the scope so it shadows the rest 
+        } ();
     }
 
-    // nestedFunction refers to the nested function returned from parentFunction
-    var nestedFunction = parentFunction();
-
-    nestedFunction(); // logs foo because the returned function accesses foo via the scope chain
+    foo(); // logs true
 
 </script></body></html>

@@ -2,7 +2,7 @@
 
     var Foo = function Foo() { };
 
-    Foo.prototype = { x: 1 }; // the logs below still work the same
+    Foo.prototype.x = 1;
 
     var FooInstance = new Foo();
 

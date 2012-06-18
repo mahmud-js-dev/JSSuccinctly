@@ -1,8 +1,13 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    // the property foo is waiting for a value, so we set its initial value to null
-    var myObjectObject = { foo: null };
+    // string, number, and boolean objects
+    console.log(typeof new String('foo')); // logs 'object'
+    console.log(typeof new Number(1)); // logs 'object'
+    console.log(typeof new Boolean(true)); // logs 'object'
 
-    console.log(myObjectObject.foo); //logs 'null'
+    // string, number, and boolean literals/primitives
+    console.log(typeof 'foo'); // logs 'string'
+    console.log(typeof 1); // logs 'number'
+    console.log(typeof true); // logs 'boolean'
 
 </script></body></html>

@@ -1,13 +1,9 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    Array.prototype.foo = 'foo'; // all instances of Array() now inherit a foo property
+    // this code only works in browsers that supports __proto__ access
+    Array.prototype.foo = 'foo';
     var myArray = new Array();
 
-    // trace foo in a verbose way leveraging *.constructor.prototype
-    console.log(myArray.constructor.prototype.foo); // logs foo
-
-    // or, of course, leverage the chain
-    console.log(myArray.foo) // logs foo
-    // uses prototype chain to find property at Array.prototype.foo
+    console.log(myArray.__proto__.foo); // logs foo, because myArray.__proto__ = Array.prototype
 
 </script></body></html>

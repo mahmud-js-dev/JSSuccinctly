@@ -1,28 +1,21 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    // create cody Object() object
-    var cody = new Object();
+    // encapsulation using arrays, creates multidimensional array chain
+    var myArray = [[[]]]; // an empty array, inside an empty array, inside an empty array
 
-    // setting properties
-    cody.living = true;
-    cody.age = 33;
-    cody.gender = 'male';
-    cody.getGender = function () { return cody.gender; };
+    /* Here is an example of encapsulation using functions: an empty function inside an empty function inside an empty function. */
+    var myFunction = function () {
+        // empty
+        var myFunction = function () {
+            // empty
+            var myFunction = function () {
+                // empty
+            };
+        };
+    };
 
-    // getting properties
-    console.log(
-        cody.living,
-        cody.age,
-        cody.gender,
-        cody.getGender()
-        ); // logs 'true 33 male male'
-
-    // updating properties, exactly like setting
-    cody.living = false;
-    cody.age = 99;
-    cody.gender = 'female';
-    cody.getGender = function () { return 'Gender = ' + cody.gender; };
-
-    console.log(cody);
+    // we can get crazy and mix and match too
+    var foo = [{ foo: [{ bar: { say: function () { return 'hi'; } }}]}];
+    console.log(foo[0].foo[0].bar.say()); // logs 'hi'
 
 </script></body></html>

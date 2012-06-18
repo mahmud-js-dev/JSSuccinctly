@@ -1,7 +1,14 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    var myArray = ['blue'] // the index 0 contains the string value 'blue'
-    console.log(myArray[0]); // logs 'blue'
-    console.log(myArray.length); // logs 1
+    var myArray = [];
+    myArray[50] = 'blue';
+    myArray[50] = { 'color': 'blue' }; // change object type from string to Object() object
+    console.log(myArray[50]); //logs 'Object {color="blue"}'
+
+    // using brackets to access the index in the array, then the property blue
+    console.log(myArray[50]['color']); //logs 'blue'
+
+    // using dot notation
+    console.log(myArray[50].color); //logs 'blue'
 
 </script></body></html>

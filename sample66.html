@@ -1,12 +1,13 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    var foo = 'bar';
+    var myFunction = function () { var foo = 'bar' }; // foo is now in the scope of myFunction()
 
-    windowRef1 = window;
-    windowRef2 = this;
+    var myApp = function () {
+        var run = function () {
+            console.log(foo); // foo is undefined, no longer in the global scope, error occurs
+        } ();
+    }
 
-    console.log(windowRef1, windowRef2); // logs reference to window object
-
-    console.log(windowRef1.foo, windowRef2.foo); // logs 'bar', 'bar'
+    myApp();
 
 </script></body></html>

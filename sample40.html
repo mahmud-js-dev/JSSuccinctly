@@ -1,10 +1,9 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    var myObject = {foo: 'value'};
+    // myArray & Array.prototype contains no toLocaleString() method
+    var myArray = ['foo', 'bar'];
 
-    console.log(myObject.hasOwnProperty('foo')) // logs true
-
-    // vs. a property from the prototype chain
-    console.log(myObject.hasOwnProperty('toString'));  // logs false
+    // toLocaleString() is actually defined at Object.prototype.toLocaleString
+    console.log(myArray.toLocaleString()); // logs 'foo,bar'
 
 </script></body></html>

@@ -1,7 +1,15 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    for (x in window) {
-        console.log(x); //logs all of the properties of the window/head object
+    var cody = {
+        age: 23,
+        gender: 'male'
+    };
+
+    for (var key in cody) { // key is a variable used to represent each property name 
+        // avoid properties inherited from the prototype chain 
+        if (cody.hasOwnProperty(key)) {
+            console.log(key);
+        }
     }
 
 </script></body></html>

@@ -1,14 +1,14 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    var x = false;
+    var x = 10;
     var foo = function () {
-        var x = false;
-        bar = function () {
-            var x = true;
-            console.log(x); // local x is first in the scope so it shadows the rest 
+        var y = 20;
+        var bar = function () {
+            var z = 30;
+            console.log(z + y + x); // z is local, y & z are found in the scope chain
         } ();
-    }
+    } ()
 
-    foo(); // logs true
+    foo(); // logs 60
 
 </script></body></html>

@@ -1,18 +1,14 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    var myArray = ['blue', 'green', 'orange', 'red'];
+    var Person = function () { this.bar = 'bar' };
+    Person.prototype.foo = 'foo';
 
-    console.log(myArray[0]); // logs blue using 0 index to access string in myArray
+    var Chef = function () { this.goo = 'goo' };
+    Chef.prototype = new Person();
+    var cody = new Chef();
 
-    // versus
-
-    var myObject = { // aka associative array/hash, known as an object in JavaScript
-        'blue': 'blue',
-        'green': 'green',
-        'orange': 'orange',
-        'red': 'red'
-    };
-
-    console.log(myObject['blue']); // logs blue
+    console.log(cody.foo); // logs 'foo'
+    console.log(cody.goo); // logs 'goo'
+    console.log(cody.bar); // logs 'bar'
 
 </script></body></html>

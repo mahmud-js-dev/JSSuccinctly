@@ -1,10 +1,11 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    // create an empty object with no properties
-    var cody1 = new Object();
-    var cody2 = new Object(undefined);
-    var cody3 = new Object(null);
+    var cody = new Object(); // create an empty object with no properties
 
-    console.log(typeof cody1, typeof cody2, typeof cody3); // logs 'object object object'
+    for (key in cody) { // confirm that cody is an empty generic object
+        if (cody.hasOwnProperty(key)) {
+            console.log(key); // should not see any logs, because cody itself has no properties
+        }
+    }
 
 </script></body></html>

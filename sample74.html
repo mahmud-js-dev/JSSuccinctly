@@ -1,11 +1,13 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    Object.prototype.foo = 'foo';
+    var cody = {
+        'living': true,
+        'age': 23,
+        'gender': 'male',
+        'getGender': function () { return cody.gender; }
+    };
 
-    var myString = 'bar';
-
-    // logs 'foo', being found at Object.prototype.foo via prototype chain
-    console.log(myString.foo);
+    console.log(cody); // logs cody object and properties
 
 </script>
 </body>

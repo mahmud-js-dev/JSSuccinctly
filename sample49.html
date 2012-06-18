@@ -1,9 +1,18 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    var integer = 1232134;
-    console.log(integer); // logs '1232134'
+    // create number object using the new keyword and the Number() constructor
+    var numberObject = new Number(1);
+    console.log(numberObject); // logs 1
+    console.log(typeof numberObject) // logs 'object'
 
-    var floatingPoint = 2.132;
-    console.log(floatingPoint); // logs '2.132'
+    // create number literal/primitive using the number constructor without new
+    var numberObjectWithOutNew = Number(1); // without using new keyword
+    console.log(numberObjectWithOutNew); // logs 1
+    console.log(typeof numberObjectWithOutNew) // logs 'number'
+
+    // create number literal/primitive (constructor leveraged behind the scene)
+    var numberLiteral = 1;
+    console.log(numberLiteral); // logs 1
+    console.log(typeof numberLiteral); // logs 'number'
 
 </script></body></html>

@@ -1,14 +1,13 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    // user-defined object constructor
-    var CustomConstructor = function () { this.foo = 'bar'; };
-
-    // instantiate an instance of CustomConstructor
+    var CustomConstructor = function CustomConstructor() { return 'Wow!'; };
     var instanceOfCustomObject = new CustomConstructor();
 
-    console.log(instanceOfCustomObject instanceof CustomConstructor); // logs true
+    // logs true
+    console.log(instanceOfCustomObject.constructor === CustomConstructor);
 
-    // works the same as a native object
-    console.log(new Array('foo') instanceof Array) // logs true
+    // returns a reference to CustomConstructor() function
+    // returns 'function() { return 'Wow!'; };'
+    console.log(instanceOfCustomObject.constructor);
 
 </script></body></html>

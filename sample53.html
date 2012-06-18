@@ -1,11 +1,11 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    var falseValue = new Boolean(false);
+    // parameter passed to Boolean() = 0 = false, thus foo = false
+    var foo = new Boolean(0)
+    console.log(foo);
 
-    console.log(falseValue); // we have a false boolean object, but objects are truthy
-
-    if (falseValue) { // boolean objects, even false boolean objects, are truthy
-        console.log('falseValue is truthy');
-    }
+    // parameter passed to Boolean() = Math = true, thus bar = true
+    var bar = new Boolean(Math)
+    console.log(bar);
 
 </script></body></html>

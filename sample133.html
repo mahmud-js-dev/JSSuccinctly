@@ -1,9 +1,18 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    var foo = new Array(1, 2, 3);
-    var bar = new Array(100);
+    var myArray = ['blue', 'green', 'orange', 'red'];
 
-    console.log(foo[0], foo[2]); // logs '1 3'
-    console.log(bar[0], bar.length); // logs 'undefined 100'
+    console.log(myArray[0]); // logs blue using 0 index to access string in myArray
+
+    // versus
+
+    var myObject = { // aka associative array/hash, known as an object in JavaScript
+        'blue': 'blue',
+        'green': 'green',
+        'orange': 'orange',
+        'red': 'red'
+    };
+
+    console.log(myObject['blue']); // logs blue
 
 </script></body></html>

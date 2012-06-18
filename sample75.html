@@ -1,12 +1,11 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    var addNumbersA = new Function('num1', 'num2', 'return num1 + num2');
+    Object.prototype.foo = 'foo';
 
-    console.log(addNumbersA(2, 2)); // logs 4
+    var myString = 'bar';
 
-    // could also be written the literal way, which is much more common
-    var addNumbersB = function (num1, num2) { return num1 + num2; };
+    // logs 'foo', being found at Object.prototype.foo via prototype chain
+    console.log(myString.foo);
 
-    console.log(addNumbersB(2, 2)); // logs 4
-
-</script></body></html>
+</script>
+</body>

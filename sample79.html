@@ -1,22 +1,11 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    // functions can be stored in variables (funcA), arrays (funcB), and objects (funcC)
-    var funcA = function () { }; // called like so: funcA()
-    var funcB = [function () { } ]; // called like so: funcB[0]()
-    var funcC = { method: function () { } }; // too.method() or funcC['method']()
+    var yelp = function () {
+        console.log('I am yelping!');
+        //functions return undefined even if we don't 
+    }
 
-    // functions can be sent to, and sent back from, functions
-    var funcD = function (func) {
-        return func
-    };
-
-    var runFuncPassedToFuncD = funcD(function () { console.log('Hi'); });
-
-    runFuncPassedToFuncD();
-
-    // functions are objects, which means they can have properties
-    var funcE = function () { };
-    funcE.answer = 'yup'; // instance property
-    console.log(funcE.answer); // logs 'yup'
+    /* logs true because a value is always returned, even if we don't specifically return one */
+    console.log(yelp() === undefined);
 
 </script></body></html>

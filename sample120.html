@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    // this code only works in browsers that supports __proto__ access
-    Array.prototype.foo = 'foo';
-    var myArray = new Array();
+    var myFunction = function () { };
 
-    console.log(myArray.__proto__.foo); // logs foo, because myArray.__proto__ = Array.prototype
+    myFunction.prototype = {}; // add the prototype property and set it to an empty object
+
+    console.log(myFunction.prototype); // logs an empty object
 
 </script></body></html>

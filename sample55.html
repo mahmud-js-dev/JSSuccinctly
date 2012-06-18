@@ -1,15 +1,18 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    // string object treated like an object
-    var stringObject = new String('foo');
-    console.log(stringObject.length); // logs 3
-    console.log(stringObject['length']); // logs 3
+    // all of these return a false boolean value
+    console.log(Boolean(0));
+    console.log(Boolean(-0));
+    console.log(Boolean(null));
+    console.log(Boolean(false));
+    console.log(Boolean(''));
+    console.log(Boolean(undefined));
+    console.log(Boolean(null));
 
-    // string literal/primitive converted to an object when treated as an object
-    var stringLiteral = 'foo';
-    console.log(stringLiteral.length); // logs 3
-    console.log(stringLiteral['length']); // logs 3
-    console.log('bar'.length); // logs 3
-    console.log('bar'['length']); // logs 3
+    // all of these return a true boolean value
+    console.log(Boolean(1789));
+    console.log(Boolean('false')); // 'false' as a string is not false the boolean value
+    console.log(Boolean(Math));
+    console.log(Boolean(Array()));
 
 </script></body></html>

@@ -1,14 +1,11 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    var x = 10;
-    var foo = function () {
-        var y = 20;
-        var bar = function () {
-            var z = 30;
-            console.log(z + y + x); // z is local, y & z are found in the scope chain
-        } ();
-    } ()
+    var sayHiText = 'howdy';
 
-    foo(); // logs 60
+    var func1 = function () {
+        var func2 = function () {
+            console.log(sayHiText); // func2 scope, but it finds sayHiText in global scope
+        } ();
+    } ();
 
 </script></body></html>

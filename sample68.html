@@ -1,11 +1,12 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    var cody = new Object(); // create an empty object with no properties
-
-    for (key in cody) { // confirm that cody is an empty generic object
-        if (cody.hasOwnProperty(key)) {
-            console.log(key); // should not see any logs, because cody itself has no properties
+    var foo = { // window is implied here, window.foo
+        fooMethod: function () {
+            alert('foo' + 'bar'); // window is implied here, window.alert
+            window.alert('foo' + 'bar'); // window is explicitly used, with the same effect
         }
     }
+
+    foo.fooMethod(); // window is implied here, window.foo.fooMethod()
 
 </script></body></html>

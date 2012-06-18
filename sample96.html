@@ -1,13 +1,13 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    var countDownFrom = function countDownFrom(num) {
-        console.log(num);
-        num--; // change the parameter value
-        if (num < 0) { return false; } // if num < 0 return function with no recursion
-        // could have also done arguments.callee(num) if it was an anonymous function
-        countDownFrom(num);
-    };
+    // Example 1
+    var speak = function () {
+        sayYo(); // sayYo() has not been defined yet but it can still be invoked, logs 'yo'
+        function sayYo() { console.log('Yo'); }
+    } (); // invoke
 
-    countDownFrom(5); // kick off the function, which logs separately 5,4,3,2,1,0
+    // Example 2
+    console.log(sum(2, 2)); // invoke sum(), which is not defined yet, but can still be invoked
+    function sum(x, y) { return x + y; }
 
 </script></body></html>

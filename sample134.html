@@ -1,14 +1,9 @@
-﻿
-<!DOCTYPE html><html lang="en"><body><script>
+﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    // Array() constructor
-    var myArray1 = new Array('blue', 'green', 'orange', 'red');
+    var foo = new Array(1, 2, 3);
+    var bar = new Array(100);
 
-    console.log(myArray1); // logs ["blue", "green", "orange", "red"]
-
-    // array literal notation
-    var myArray2 = ['blue', 'green', 'orange', 'red'];
-
-    console.log(myArray2); // logs ["blue", "green", "orange", "red"]
+    console.log(foo[0], foo[2]); // logs '1 3'
+    console.log(bar[0], bar.length); // logs 'undefined 100'
 
 </script></body></html>

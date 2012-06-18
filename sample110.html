@@ -1,13 +1,22 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    var foo = 1; // foo = 1
+    var foo = 0; // global scope
+    console.log(foo); // logs 0
 
-    if (true) {
-        foo = 2; // foo = 2
-        for (var i = 3; i <= 5; i++) {
-            foo = i; // foo = 3,4, then 5
-            console.log(foo); // logs 3,4,5
-        }
-    }
+    var myFunction = function () {
+
+        var foo = 1; // local scope
+
+        console.log(foo); // logs 1
+
+        var myNestedFunction = function () {
+
+            var foo = 2; // local scope
+
+            console.log(foo); // logs 2
+        } ();
+    } ();
+
+    eval('var foo = 3; console.log(foo);'); // eval() scope
 
 </script></body></html>

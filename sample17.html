@@ -1,12 +1,21 @@
 ﻿<!DOCTYPE html><html lang="en"><body><script>
 
-    var myObject = {};
+    var object = {
+        myString: 'string',
+        myNumber: 10,
+        myBoolean: false,
+        myNull: null,
+        myUndefined: undefined
+    };
 
-    var copyOfMyObject = myObject; // not copied by value, just the reference is copied
+    var array = ['string', 10, false, null, undefined];
 
-    myObject.foo = 'bar'; // manipulate the value stored in myObject
+    /* Contrast this to the simplicity of the primitive values below. In a primitive form, none of the values below can be more complex than what you see while complex values can encapsulate any of the JavaScript values (seen above). */
 
-    /* Now if we log myObject & copyOfMyObject, they will have a foo property because they reference the same object. */
-    console.log(myObject, copyOfMyObject); // logs 'Object { foo="bar"} Object { foo="bar"}'
+    var myString = 'string';
+    var myNumber = 10;
+    var myBoolean = false;
+    var myNull = null;
+    var myUndefined = undefined;
 
 </script></body></html>
